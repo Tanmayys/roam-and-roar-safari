@@ -68,7 +68,7 @@ export default function Footer() {
           <a 
             href="https://orbyza.com" 
             target="_blank" 
-            rel="noopener noreferrer"
+            rel="noopener"
             className="flex items-end gap-2 text-white/90 hover:text-[#c38b2d] transition-colors group"
           >
              <div className="text-xl font-black italic tracking-tighter uppercase leading-none">ORBYZA</div>

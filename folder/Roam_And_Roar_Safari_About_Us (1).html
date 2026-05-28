@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Roam & Roar Safari</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a2e1a;
+    --moss: #2d4a1e;
+    --gold: #c8922a;
+    --cream: #f5f0e8;
+    --tan: #d4b896;
+    --text: #2a2a2a;
+    --muted: #6b6b6b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 80px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(200,146,42,0.15) 0%, transparent 70%);
+  }
+  .hero-tag {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--tan);
+    max-width: 520px;
+    margin: 0 auto;
+    letter-spacing: 0.3px;
+    position: relative;
+  }
+  .hero-divider {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 30px auto 0;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 60px 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 20px;
+    line-height: 1.25;
+  }
+  .section p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #444;
+    margin-bottom: 16px;
+    max-width: 680px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid #ddd;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  /* SERVICES GRID */
+  .services {
+    background: var(--forest);
+    padding: 60px 40px;
+  }
+  .services-inner {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .services .section-label { color: var(--gold); }
+  .services h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    color: var(--cream);
+    margin-bottom: 36px;
+    line-height: 1.25;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,146,42,0.3);
+    border-radius: 8px;
+    padding: 28px 24px;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .card:hover {
+    background: rgba(200,146,42,0.1);
+    border-color: var(--gold);
+  }
+  .card-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+  .card p {
+    font-size: 13px;
+    color: var(--tan);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* WHY US */
+  .why {
+    padding: 60px 40px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .why h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 8px;
+    line-height: 1.25;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 36px;
+  }
+  .why-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .why-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+  .why-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--forest);
+    margin-bottom: 6px;
+  }
+  .why-item p {
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 300;
+  }
+
+  /* DISCLAIMER */
+  .disclaimer-wrap {
+    max-width: 860px;
+    margin: 0 auto 60px;
+    padding: 0 40px;
+  }
+  .disclaimer {
+    background: #fff8ee;
+    border-left: 4px solid var(--gold);
+    padding: 28px 36px;
+    border-radius: 0 8px 8px 0;
+  }
+  .disclaimer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--forest);
+    margin-bottom: 10px;
+  }
+  .disclaimer p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  .disclaimer p:last-child { margin-bottom: 0; }
+
+  /* CONTACT */
+  .contact {
+    background: var(--moss);
+    padding: 50px 40px;
+    text-align: center;
+    color: var(--cream);
+  }
+  .contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .contact p {
+    font-size: 15px;
+    color: var(--tan);
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+  .contact-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    font-size: 14px;
+    color: var(--cream);
+  }
+  .contact-details span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .contact-details strong { color: var(--gold); }
+
+  /* FOOTER */
+  .footer {
+    background: var(--forest);
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 12px;
+    color: #666;
+    letter-spacing: 1px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .section, .why, .disclaimer-wrap { padding: 40px 20px; }
+    .services { padding: 40px 20px; }
+    .contact { padding: 40px 20px; }
+    .hero { padding: 60px 20px 40px; }
+    .contact-details { flex-direction: column; align-items: center; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-tag">About Us</p>
+  <h1>Where the Wild <em>Calls You</em></h1>
+  <p class="hero-sub">Roam & Roar Safari is your trusted local guide to the magnificent wilderness of Jim Corbett National Park.</p>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="section">
+  <p class="section-label">Our Story</p>
+  <h2>Who We Are</h2>
+  <p>Roam & Roar Safari is a privately owned safari booking company based in Ramnagar, Uttarakhand — the gateway town to one of India's most celebrated wildlife destinations, Jim Corbett National Park. Incorporated on 24th May 2026 and registered as a Micro Enterprise under Udyam Registration No. UDYAM-UK-07-0048632, we are a government-recognised travel services operator.</p>
+  <p>Founded with a deep passion for wildlife and a commitment to responsible tourism, we have been helping nature lovers, wildlife enthusiasts, and families experience the magic of Jim Corbett for over a year. From the first inquiry to the moment you spot a tiger in the wild — we are with you every step of the way.</p>
+  <p>Our team is made up of local experts who know Jim Corbett's terrain, zones, and wildlife patterns intimately. This local knowledge is what sets us apart and ensures every safari we plan is memorable.</p>
+</section>
+
+<hr class="divider">
+
+<!-- WHAT WE DO -->
+<section class="section">
+  <p class="section-label">What We Do</p>
+  <h2>How We Help You</h2>
+  <p>We assist tourists in planning and booking complete safari experiences in Jim Corbett National Park. This includes helping you navigate government permit availability, selecting the right safari zone, and arranging everything you need for an unforgettable wildlife experience.</p>
+  <p>As a private booking operator, we work closely with licensed local guides, government-approved vehicle operators, and trusted accommodation providers to deliver a seamless experience for every visitor.</p>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="services-inner">
+    <p class="section-label">Our Services</p>
+    <h2>What We Offer</h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🚙</div>
+        <h3>Jeep Safari</h3>
+        <p>Explore the deep forest zones up close with our licensed jeep safari packages — ideal for serious wildlife spotting.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚌</div>
+        <h3>Canter Safari</h3>
+        <p>A shared, open-top canter experience perfect for families and groups looking to enjoy Jim Corbett affordably.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏕️</div>
+        <h3>Dhikala Stay</h3>
+        <p>We assist with bookings at the iconic Dhikala zone — the heart of Jim Corbett — for an immersive overnight jungle stay.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🐘</div>
+        <h3>Elephant Ride</h3>
+        <p>Experience the jungle from atop an elephant — a unique and unforgettable perspective available at select zones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+  <p class="section-label">Why Choose Us</p>
+  <h2>What Makes Us Different</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-dot"></div>
+      <div>
+        <h4>Locally Based</h4>
+        <p>We are based in Ramnagar — not a distant city. We know Jim Corbett better than anyone.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-dot"></div>
+      <div>
+        <h4>End-to-End Support</h4>
+        <p>From permit booking to drop-off after your safari — we handle everything for you.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-dot"></div>
+      <div>
+        <h4>Licensed Operators</h4>
+        <p>All our vehicle operators and guides are government-licensed and fully verified.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-dot"></div>
+      <div>
+        <h4>Transparent Pricing</h4>
+        <p>No hidden charges. What we quote is what you pay — always.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-dot"></div>
+      <div>
+        <h4>Personalized Planning</h4>
+        <p>Every trip is planned around your group size, dates, and preferences.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="why-dot"></div>
+      <div>
+        <h4>Responsible Tourism</h4>
+        <p>We follow all wildlife and forest guidelines to protect Jim Corbett's ecosystem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-wrap">
+  <div class="disclaimer">
+    <h3>⚠️ Important Disclaimer</h3>
+    <p><strong>Roam & Roar Safari is an independent, privately owned safari booking operator.</strong> We are not the official website of Jim Corbett National Park.</p>
+    <p>We are not affiliated with, endorsed by, or connected to the Uttarakhand Forest Department, the Government of India, or any government authority in any official capacity.</p>
+    <p>Safari permits are issued by the government — we assist customers in the booking process as a private service provider. All government permit fees are paid directly to the relevant authorities.</p>
+    <p><strong>Proprietor:</strong> Ayaz Ahmed &nbsp;|&nbsp; <strong>Udyam Registration No.:</strong> UDYAM-UK-07-0048632 &nbsp;|&nbsp; <strong>Registered Address:</strong> Lutabarh, Berajhal, Ramnagar, Nainital – 244715, Uttarakhand &nbsp;|&nbsp; <strong>Date of Incorporation:</strong> 24/05/2026</p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Get In Touch</h2>
+  <p>We are available 7 days a week to help you plan your perfect Jim Corbett safari.</p>
+  <div class="contact-details">
+    <span>📍 <strong>Location:</strong> Lutabarh, Berajhal, Ramnagar, Nainital – 244715, Uttarakhand</span>
+    <span>📞 <strong>Phone / WhatsApp:</strong> +91 80773 54975</span>
+    <span>✉️ <strong>Email:</strong> ayazofficial786@gmail.com</span>
+    <span>🌐 <strong>Website:</strong> roamandroarsafari.co.in</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  © Roam & Roar Safari &nbsp;|&nbsp; Ramnagar, Uttarakhand &nbsp;|&nbsp; Private Safari Booking Operator
+</div>
+
+</body>
+</html>

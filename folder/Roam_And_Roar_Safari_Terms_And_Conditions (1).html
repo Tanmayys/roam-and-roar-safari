@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions — Roam & Roar Safari</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a2e1a;
+    --moss: #2d4a1e;
+    --gold: #c8922a;
+    --cream: #f5f0e8;
+    --tan: #d4b896;
+    --text: #2a2a2a;
+    --muted: #6b6b6b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Lato', sans-serif; background: var(--cream); color: var(--text); line-height: 1.8; }
+
+  .hero {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 70px 40px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(200,146,42,0.15) 0%, transparent 70%);
+  }
+  .hero-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 5vw, 52px);
+    font-weight: 700;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .hero-meta {
+    font-size: 13px;
+    color: var(--tan);
+    font-weight: 300;
+    position: relative;
+  }
+  .hero-divider { width: 60px; height: 2px; background: var(--gold); margin: 24px auto 0; }
+
+  .container { max-width: 820px; margin: 0 auto; padding: 60px 40px; }
+
+  .intro-box {
+    background: #fff8ee;
+    border-left: 4px solid var(--gold);
+    padding: 24px 28px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 48px;
+  }
+  .intro-box p { font-size: 15px; color: #555; font-weight: 300; line-height: 1.7; }
+
+  .policy-section { margin-bottom: 44px; }
+  .policy-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--forest);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .policy-section p {
+    font-size: 15px;
+    color: #444;
+    font-weight: 300;
+    margin-bottom: 12px;
+    line-height: 1.8;
+  }
+  .policy-section ul {
+    list-style: none;
+    margin: 12px 0 16px 0;
+    padding: 0;
+  }
+  .policy-section ul li {
+    font-size: 15px;
+    color: #444;
+    font-weight: 300;
+    padding: 6px 0 6px 20px;
+    position: relative;
+    line-height: 1.7;
+  }
+  .policy-section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 7px;
+    height: 7px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+  .policy-section strong { color: var(--forest); font-weight: 700; }
+
+  .warning-box {
+    background: #fff3f3;
+    border: 1px solid #f5c5c5;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .warning-box p { margin-bottom: 0; font-size: 14px; color: #8b0000; }
+
+  .highlight-box {
+    background: #f0f7f0;
+    border: 1px solid #c5dcc5;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .highlight-box p { margin-bottom: 0; font-size: 14px; }
+
+  .cancellation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .cancellation-table th {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 700;
+  }
+  .cancellation-table td {
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #444;
+    font-weight: 300;
+  }
+  .cancellation-table tr:nth-child(even) td { background: #faf7f2; }
+
+  .contact-box {
+    background: var(--forest);
+    color: var(--cream);
+    border-radius: 10px;
+    padding: 32px 36px;
+    margin-top: 48px;
+  }
+  .contact-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--cream);
+  }
+  .contact-box p { font-size: 14px; color: var(--tan); font-weight: 300; margin-bottom: 8px; }
+  .contact-box strong { color: var(--gold); }
+
+  .footer {
+    background: var(--forest);
+    text-align: center;
+    padding: 20px 40px;
+    font-size: 12px;
+    color: #666;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 40px 20px; }
+    .hero { padding: 50px 20px 40px; }
+    .cancellation-table { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <p class="hero-tag">Legal</p>
+  <h1>Terms &amp; Conditions</h1>
+  <p class="hero-meta">Last Updated: May 2026 &nbsp;|&nbsp; Roam & Roar Safari, Ramnagar, Uttarakhand</p>
+  <div class="hero-divider"></div>
+</section>
+
+<div class="container">
+
+  <div class="intro-box">
+    <p>Please read these Terms and Conditions carefully before using our website or booking any safari services through Roam & Roar Safari. By using our website or making a booking with us, you agree to be bound by these terms. If you do not agree, please do not use our services.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>1. About Roam & Roar Safari</h2>
+    <p>Roam & Roar Safari is an independent, privately owned safari booking operator based in Ramnagar, Uttarakhand, India, registered as a Micro Enterprise under the Ministry of MSME, Government of India.</p>
+    <p><strong>Proprietor:</strong> Ayaz Ahmed<br>
+    <strong>Udyam Registration No.:</strong> UDYAM-UK-07-0048632<br>
+    <strong>Registered Address:</strong> Lutabarh, Berajhal, Ramnagar, Nainital – 244715, Uttarakhand<br>
+    <strong>Date of Incorporation:</strong> 24/05/2026</p>
+    <p>We are not the official website of Jim Corbett National Park and are not affiliated with, endorsed by, or connected to the Uttarakhand Forest Department, the Government of India, or any government authority in any official capacity.</p>
+    <p>We act as a facilitator — helping tourists plan and book safari experiences at Jim Corbett National Park through licensed local operators and government-approved channels.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>2. Services Provided</h2>
+    <p>Roam & Roar Safari provides the following services:</p>
+    <ul>
+      <li>Safari booking assistance — Jeep Safari, Canter Safari, Elephant Ride</li>
+      <li>Dhikala zone jeep safari and stay booking assistance</li>
+      <li>Government permit facilitation on behalf of the customer</li>
+      <li>Safari trip planning and itinerary advice</li>
+      <li>Coordination with licensed local guides and vehicle operators</li>
+    </ul>
+    <div class="highlight-box">
+      <p>✅ <strong>Please Note:</strong> All safari permits are issued by the Uttarakhand Forest Department. Permit availability is subject to government quotas and seasonal restrictions. We assist in the booking process but cannot guarantee permit availability at all times.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <h2>3. Booking & Payment</h2>
+    <p>All bookings made through Roam & Roar Safari are subject to availability of government-issued permits and licensed vehicle operators.</p>
+    <ul>
+      <li>Bookings are confirmed only upon receipt of full or agreed advance payment</li>
+      <li>Government permit fees are separate and paid directly to relevant authorities</li>
+      <li>Our service charges cover coordination, planning, and operator arrangement only</li>
+      <li>All prices quoted are inclusive of applicable taxes unless stated otherwise</li>
+      <li>Payment receipts will be provided for all transactions</li>
+    </ul>
+  </div>
+
+  <div class="policy-section">
+    <h2>4. Cancellation & Refund Policy</h2>
+    <p>The following cancellation policy applies to our service charges. Government permit fees are subject to the Forest Department's own refund rules and are outside our control.</p>
+
+    <table class="cancellation-table">
+      <thead>
+        <tr>
+          <th>Cancellation Notice</th>
+          <th>Refund on Service Charges</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>7 or more days before safari date</td>
+          <td>Full refund</td>
+        </tr>
+        <tr>
+          <td>3 to 6 days before safari date</td>
+          <td>50% refund</td>
+        </tr>
+        <tr>
+          <td>Less than 3 days before safari date</td>
+          <td>No refund</td>
+        </tr>
+        <tr>
+          <td>No show on safari day</td>
+          <td>No refund</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Cancellations must be communicated in writing via WhatsApp or email. Verbal cancellations will not be accepted.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>5. Rescheduling</h2>
+    <p>Rescheduling of a confirmed booking is subject to permit and operator availability on the new requested date. Rescheduling requests must be made at least 48 hours before the original safari date. We will make every effort to accommodate your request but cannot guarantee availability.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>6. Safari Rules & Guest Responsibilities</h2>
+    <p>All guests must comply with the rules and regulations of Jim Corbett National Park as set by the Uttarakhand Forest Department. Key rules include:</p>
+    <ul>
+      <li>Guests must carry valid government-issued photo ID on the day of the safari</li>
+      <li>Entry into the park is permitted only during designated safari hours</li>
+      <li>Guests must not make loud noises, litter, or disturb wildlife</li>
+      <li>Feeding wildlife is strictly prohibited</li>
+      <li>Guests must remain in the safari vehicle at all times unless permitted by the guide</li>
+      <li>Consumption of alcohol inside the park is prohibited</li>
+      <li>Photography of wildlife is permitted but flash photography is strictly banned</li>
+    </ul>
+    <div class="warning-box">
+      <p>⚠️ Roam & Roar Safari is not responsible for any penalties, fines, or expulsion from the park resulting from a guest's failure to follow Forest Department rules.</p>
+    </div>
+  </div>
+
+  <div class="policy-section">
+    <h2>7. Wildlife & Force Majeure</h2>
+    <p>Wildlife sightings, including tiger sightings, cannot be guaranteed. Jim Corbett National Park is a natural wildlife habitat, and animal behaviour is unpredictable. We do not offer refunds based on the absence of specific wildlife sightings.</p>
+    <p>We are not liable for cancellations or changes caused by circumstances beyond our control, including but not limited to:</p>
+    <ul>
+      <li>Park closure by Forest Department or government authorities</li>
+      <li>Extreme weather conditions</li>
+      <li>Natural disasters or calamities</li>
+      <li>Government-imposed restrictions or curfews</li>
+    </ul>
+    <p>In such cases, we will make every effort to reschedule your booking or provide a fair resolution.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>8. Liability</h2>
+    <p>Roam & Roar Safari acts solely as a booking facilitator. We are not responsible for:</p>
+    <ul>
+      <li>Any injury, accident, or loss during the safari</li>
+      <li>Actions or negligence of third-party vehicle operators or guides</li>
+      <li>Loss or damage to personal belongings during the safari</li>
+      <li>Permit rejections by the Forest Department</li>
+    </ul>
+    <p>Guests participate in safari activities at their own risk. We strongly recommend travel insurance for all visitors.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>9. Intellectual Property</h2>
+    <p>All content on this website — including text, images, logos, and design — is the property of Roam & Roar Safari. Unauthorized use, reproduction, or distribution of any content from this website is strictly prohibited.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>10. Governing Law</h2>
+    <p>These Terms and Conditions are governed by the laws of India. Any disputes arising from the use of our services shall be subject to the jurisdiction of the courts in Ramnagar / Nainital, Uttarakhand.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>11. Changes to These Terms</h2>
+    <p>We reserve the right to update or modify these Terms and Conditions at any time without prior notice. The updated version will be posted on this page with a revised date. Continued use of our services after any changes constitutes your acceptance of the new terms.</p>
+  </div>
+
+  <div class="contact-box">
+    <h3>Questions About These Terms?</h3>
+    <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+    <p>👤 <strong>Proprietor:</strong> Ayaz Ahmed</p>
+    <p>📍 <strong>Address:</strong> Lutabarh, Berajhal, Ramnagar, Nainital – 244715, Uttarakhand, India</p>
+    <p>📞 <strong>Phone / WhatsApp:</strong> +91 80773 54975</p>
+    <p>✉️ <strong>Email:</strong> ayazofficial786@gmail.com</p>
+    <p>🌐 <strong>Website:</strong> roamandroarsafari.co.in</p>
+    <p>🏛️ <strong>Udyam Reg. No.:</strong> UDYAM-UK-07-0048632</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  © Roam & Roar Safari &nbsp;|&nbsp; Ramnagar, Uttarakhand &nbsp;|&nbsp; Private Safari Booking Operator
+</div>
+
+</body>
+</html>

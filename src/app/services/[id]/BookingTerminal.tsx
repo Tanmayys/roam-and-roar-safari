@@ -123,7 +123,6 @@ PERSONS: ${formData.get("guests")}
 EXPLORER: ${formData.get("name")}
 CONTACT: ${formData.get("phone")}
 EMAIL: ${formData.get("email")}
-ID (Aadhaar): ${formData.get("aadhaar")}
 ---------------------------
 Please process permit verification.`;
                 window.open(`https://wa.me/918077354975?text=${encodeURIComponent(msg)}`);
@@ -136,8 +135,7 @@ Please process permit verification.`;
                     {[
                       { n: "name", l: "Full Name *", p: "Enter your full name" },
                       { n: "phone", l: "Phone Number *", p: "+91 XXXXX XXXXX" },
-                      { n: "email", l: "Email Address *", p: "your@email.com" },
-                      { n: "aadhaar", l: "Aadhaar Number (12 digits) *", p: "XXXX XXXX XXXX" }
+                      { n: "email", l: "Email Address *", p: "your@email.com" }
                     ].map(f => (
                       <div key={f.n} className="space-y-2.5">
                         <label className="text-[10px] font-black uppercase tracking-widest text-[#c38b2d]">{f.l}</label>

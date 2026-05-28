@@ -35,7 +35,7 @@ export default function ThankYouPage() {
             </h1>
           </div>
           <p className="text-white/60 font-medium leading-relaxed italic text-xs md:text-sm max-w-lg mx-auto">
-            Your request has been logged in our **Zoho CRM** database. A wildlife coordinator has been assigned to verify permit slots.
+            Your request has been securely logged in our system. A wildlife coordinator has been assigned to verify permit slots.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function ThankYouPage() {
           {/* Chatbox Body */}
           <div className="p-4 space-y-4 bg-[url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png')] bg-repeat bg-opacity-5 min-h-[120px]">
             <div className="bg-[#142614] border border-green-900/30 p-3 rounded-2xl rounded-tl-none max-w-[85%] text-xs text-white/90 leading-relaxed shadow-md font-bold italic">
-              "Namaste! 🙏 I've received your request in Zoho. I'm checking Jim Corbett core zone permits right now. Send me a quick text to expedite approval!"
+              "Namaste! 🙏 I've received your request. I'm checking Jim Corbett core zone permits right now. Send me a quick text to expedite approval!"
             </div>
           </div>
 

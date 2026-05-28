@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
 
 interface Service {
   name: string;
@@ -13,6 +14,7 @@ interface Service {
 }
 
 export default function BookingTerminal({ service }: { service: Service }) {
+  const router = useRouter();
   const isCanter = service.name.toLowerCase().includes("canter");
   const isDhikala = service.name.toLowerCase().includes("dhikala");
 
@@ -111,21 +113,35 @@ export default function BookingTerminal({ service }: { service: Service }) {
 
             {/* Main Form */}
             <form 
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
                 const formData = new FormData(e.currentTarget);
-                const msg = `SIGNAL TO HQ: 
----------------------------
-REQUEST: ${service.name}
-EXPEDITION DATE: ${formData.get("date")}
-PERSONS: ${formData.get("guests")}
----------------------------
-EXPLORER: ${formData.get("name")}
-CONTACT: ${formData.get("phone")}
-EMAIL: ${formData.get("email")}
----------------------------
-Please process permit verification.`;
-                window.open(`https://wa.me/918077354975?text=${encodeURIComponent(msg)}`);
+                const name = formData.get("name") as string;
+                const phone = formData.get("phone") as string;
+                const email = formData.get("email") as string;
+                const date = formData.get("date") as string;
+                const guests = formData.get("guests") as string;
+
+                // Send to Zoho CRM API Route
+                try {
+                  await fetch('/api/zoho/lead', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                      name,
+                      phone,
+                      email,
+                      date,
+                      guests,
+                      serviceName: service.name,
+                      source: 'booking'
+                    })
+                  });
+                } catch (err) {
+                  console.error('Zoho submission failed:', err);
+                }
+
+                router.push('/thank-you');
               }}
               className="space-y-12"
             >
@@ -148,17 +164,15 @@ Please process permit verification.`;
                       </div>
                     ))}
                   </div>
-                  <div className="flex justify-center">
-                    <div className="w-full md:w-[calc(50%-12px)] space-y-2.5">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-[#c38b2d]">Email Address *</label>
-                      <input 
-                        name="email" 
-                        required 
-                        type="email" 
-                        placeholder="your@email.com" 
-                        className="w-full bg-[#1a2e1a] border border-white/20 p-5 rounded-xl text-sm md:text-base font-bold focus:outline-none focus:border-[#c38b2d] transition-all text-white placeholder:text-white/30" 
-                      />
-                    </div>
+                  <div className="space-y-2.5">
+                    <label className="text-[10px] font-black uppercase tracking-widest text-[#c38b2d]">Email Address *</label>
+                    <input 
+                      name="email" 
+                      required 
+                      type="email" 
+                      placeholder="your@email.com" 
+                      className="w-full bg-[#1a2e1a] border border-white/20 p-5 rounded-xl text-sm md:text-base font-bold focus:outline-none focus:border-[#c38b2d] transition-all text-white placeholder:text-white/30" 
+                    />
                   </div>
                </div>
 

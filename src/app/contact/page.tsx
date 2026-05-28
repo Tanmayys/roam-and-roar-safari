@@ -1,6 +1,9 @@
 "use client";
 
+import { useRouter } from 'next/navigation';
+
 export default function ContactPage() {
+  const router = useRouter();
   return (
     <main className="min-h-screen pt-40 pb-20 selection:bg-[#c38b2d]">
       <section className="px-6 md:px-20 mb-32">
@@ -62,18 +65,32 @@ export default function ContactPage() {
 
              <form 
                className="space-y-6" 
-               onSubmit={(e) => {
+               onSubmit={async (e) => {
                  e.preventDefault();
                  const formData = new FormData(e.currentTarget);
-                 const msg = `GENERAL ENQUIRY: 
----------------------------
-NAME: ${formData.get("name")}
-PHONE: ${formData.get("phone")}
-EMAIL: ${formData.get("email")}
----------------------------
-MESSAGE:
-${formData.get("message")}`;
-                 window.open(`https://wa.me/918077354975?text=${encodeURIComponent(msg)}`);
+                 const name = formData.get("name") as string;
+                 const email = formData.get("email") as string;
+                 const phone = formData.get("phone") as string;
+                 const message = formData.get("message") as string;
+
+                 // Send to Zoho CRM API Route
+                 try {
+                   await fetch('/api/zoho/lead', {
+                     method: 'POST',
+                     headers: { 'Content-Type': 'application/json' },
+                     body: JSON.stringify({
+                       name,
+                       email,
+                       phone,
+                       message,
+                       source: 'contact'
+                     })
+                   });
+                 } catch (err) {
+                   console.error('Zoho submission failed:', err);
+                 }
+
+                 router.push('/thank-you');
                }}
              >
                 <div>

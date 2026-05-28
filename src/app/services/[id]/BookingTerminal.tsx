@@ -137,7 +137,7 @@ Please process permit verification.`;
                       { n: "phone", l: "Phone Number *", p: "+91 XXXXX XXXXX" },
                       { n: "email", l: "Email Address *", p: "your@email.com" }
                     ].map(f => (
-                      <div key={f.n} className="space-y-2.5">
+                      <div key={f.n} className={`space-y-2.5 ${f.n === 'email' ? 'md:col-span-2' : ''}`}>
                         <label className="text-[10px] font-black uppercase tracking-widest text-[#c38b2d]">{f.l}</label>
                         <input 
                           name={f.n} 

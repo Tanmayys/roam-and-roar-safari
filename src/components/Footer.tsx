@@ -14,7 +14,7 @@ export default function Footer() {
             ROAM <span className="text-[#c38b2d]">&</span> ROAR
           </Link>
           <p className="text-sm text-white/30 font-bold italic mb-6 max-w-sm leading-relaxed">
-            The core-zone specialists of Jim Corbett. High-frequency tiger sightings through professional tracks.
+            The core-zone specialists of Jim Corbett. Expert-guided safaris through Jim Corbett's finest core zones.
           </p>
           <div className="flex gap-4">
             {[

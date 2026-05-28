@@ -252,7 +252,7 @@ export default function BookingTerminal({ service }: { service: Service }) {
 
       <section className="py-32 px-10 md:px-20 bg-[#071107] border-t border-white/20 text-center">
          <div className="max-w-4xl mx-auto">
-            <h4 className="text-4xl md:text-6xl font-black tracking-tighter italic mb-12 text-white/10 uppercase">Secure Entry</h4>
+            <h4 className="text-4xl md:text-6xl font-black tracking-tighter italic mb-12 text-white/10 uppercase">Permit Booking</h4>
             <p className="text-lg md:text-xl text-white/50 font-bold mb-20 italic leading-relaxed">Permits for Jim Corbett are limited and highly sought after. We recommend booking at least 45 days in advance for core zones like Dhikala and Bijrani.</p>
             <Link href="/services" className="text-[#c38b2d] font-black uppercase tracking-[0.5em] text-xs border-b-2 border-[#c38b2d] pb-2">Return to Zone Atlas</Link>
          </div>

@@ -94,7 +94,7 @@ export async function POST(request: Request) {
           </table>
         </div>
         <div style="background-color: #f1f1f1; padding: 15px; text-align: center; font-size: 11px; color: #777777; font-weight: bold;">
-          This lead was securely captured and dispatched via Nodemailer.
+          This lead was captured and dispatched via Nodemailer.
         </div>
       </div>
     `;

@@ -3,8 +3,26 @@
 import Image from "next/image";
 
 export default function AboutPage() {
+  const jsonLdSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://roamandroarsafari.com/about"
+    },
+    "name": "About Roam & Roar Safari",
+    "description": "Learn about Roam & Roar Safari, a trusted local guide and government-recognised travel operator for Jim Corbett National Park safaris.",
+    "publisher": {
+      "@id": "https://roamandroarsafari.com/#organization"
+    }
+  };
+
   return (
     <main className="min-h-screen pt-40 pb-20 selection:bg-[#c38b2d]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
+      />
       <section className="px-6 md:px-20 mb-32">
         <div className="max-w-7xl mx-auto">
           <h4 className="text-[#c38b2d] text-xs font-black uppercase tracking-[0.8em] mb-6">About Us</h4>
@@ -35,7 +53,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="relative aspect-square rounded-3xl md:rounded-[4rem] overflow-hidden border-[8px] md:border-[12px] border-[#1a2e1a] shadow-2xl">
-            <Image src="/bijrani.png" alt="Jim Corbett Safari" fill className="object-cover grayscale-[0.2]" />
+            <Image src="/bijrani.png" alt="Jim Corbett National Park Safari Guide Team" fill className="object-cover grayscale-[0.2]" />
           </div>
         </div>
       </section>

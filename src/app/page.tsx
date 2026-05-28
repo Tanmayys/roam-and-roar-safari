@@ -103,7 +103,7 @@ export default function Home() {
           {(isMobile === true || isMobile === null) && (
             <Image 
               src="/bijrani.png" 
-              alt="Jim Corbett Safari Background" 
+              alt="Jim Corbett National Park Jeep Safari Background" 
               fill 
               priority 
               className="object-cover -scale-x-100"
@@ -147,7 +147,7 @@ export default function Home() {
             <h4 className="text-[#c38b2d] text-[10px] font-black uppercase tracking-[0.6em] mb-6">Our Operations</h4>
             <h2 className="text-6xl md:text-8xl font-black leading-none mb-10 text-white italic uppercase tracking-tighter">THE WILD HQ</h2>
             <p className="text-2xl text-white/50 leading-relaxed font-bold italic mb-12">
-              Strategically based in Ramnagar, we offer an expert-guided safari experience with core zone access for the best possible chance of wildlife sightings.
+              Strategically based in Ramnagar, we provide expert-guided access to Jim Corbett's core zones for the best possible wildlife experience.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                <div>
@@ -163,7 +163,7 @@ export default function Home() {
           <div className="relative aspect-square md:aspect-[4/3] rounded-3xl md:rounded-[4rem] overflow-hidden border-[12px] border-[#1a2e1a] shadow-2xl">
             <Image 
               src="/bijrani.png" 
-              alt="Bijrani Zone" 
+              alt="Bijrani Zone Jeep Safari Booking in Jim Corbett" 
               fill 
               className="object-cover transition-all duration-1000"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -190,7 +190,7 @@ export default function Home() {
                 <div className={`h-48 relative overflow-hidden ${pkg.featured ? "brightness-110" : ""}`}>
                    <Image 
                      src={pkg.img} 
-                     alt={pkg.title} 
+                     alt={`${pkg.title} - Official Jim Corbett Booking`} 
                      fill 
                      className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                      sizes="(max-width: 768px) 100vw, 33vw"
@@ -232,7 +232,7 @@ export default function Home() {
                 <div className="h-44 relative overflow-hidden transition-all duration-700">
                    <Image 
                      src={zone.img} 
-                     alt={zone.name} 
+                     alt={`${zone.name} Safari Zone in Jim Corbett`} 
                      fill 
                      className="object-cover transition-transform duration-1000 group-hover:scale-110" 
                      sizes="(max-width: 768px) 100vw, 25vw"

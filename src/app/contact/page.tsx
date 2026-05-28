@@ -4,8 +4,27 @@ import { useRouter } from 'next/navigation';
 
 export default function ContactPage() {
   const router = useRouter();
+  
+  const jsonLdSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://roamandroarsafari.com/contact"
+    },
+    "name": "Contact Roam & Roar Safari",
+    "description": "Reach our official Jim Corbett National Park booking office in Ramnagar, Uttarakhand.",
+    "publisher": {
+      "@id": "https://roamandroarsafari.com/#organization"
+    }
+  };
+
   return (
     <main className="min-h-screen pt-40 pb-20 selection:bg-[#c38b2d]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
+      />
       <section className="px-6 md:px-20 mb-32">
         <div className="max-w-7xl mx-auto text-center">
           <h4 className="text-[#c38b2d] text-xs font-black uppercase tracking-[0.8em] mb-6">Contact</h4>

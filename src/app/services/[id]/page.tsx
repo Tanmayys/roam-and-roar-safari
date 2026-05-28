@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import BookingTerminal from "./BookingTerminal";
 
 const servicesMapping = {
@@ -22,6 +23,32 @@ export async function generateStaticParams() {
 
 interface PageProps {
   params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const service = servicesMapping[id as keyof typeof servicesMapping];
+  if (!service) return {};
+
+  return {
+    title: `${service.name} Online Permit Booking | Jim Corbett National Park`,
+    description: `Book your permits for the official ${service.name} inside Jim Corbett National Park. Details, timings, best seasons, union tariffs, and guidelines.`,
+    alternates: {
+      canonical: `https://roamandroarsafari.com/services/${id}`,
+    },
+    openGraph: {
+      title: `${service.name} Online Permit Booking | Jim Corbett National Park`,
+      description: `Book your permits for the official ${service.name} inside Jim Corbett National Park. Details, timings, best seasons, union tariffs, and guidelines.`,
+      images: [
+        {
+          url: service.img,
+          width: 800,
+          height: 600,
+          alt: service.name,
+        },
+      ],
+    },
+  };
 }
 
 export default async function ServicePage({ params }: PageProps) {

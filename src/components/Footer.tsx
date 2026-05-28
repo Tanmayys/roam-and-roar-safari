@@ -33,8 +33,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <h5 className="text-[#c38b2d] text-[10px] font-black uppercase tracking-[0.4em] mb-4">Atlas</h5>
-          <ul className="space-y-3 text-[9px] font-black uppercase tracking-[0.2em] text-white/30">
+          <h5 className="text-[#c38b2d] text-xs font-black uppercase tracking-[0.3em] mb-5">Atlas</h5>
+          <ul className="space-y-3 text-xs font-bold uppercase tracking-widest text-white/70">
             <li><Link href="/" className="hover:text-white transition-colors">Home Base</Link></li>
             <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
             <li><Link href="/services" className="hover:text-white transition-colors">Territories</Link></li>
@@ -43,8 +43,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <h5 className="text-[#c38b2d] text-[10px] font-black uppercase tracking-[0.4em] mb-4">Support</h5>
-          <ul className="space-y-3 text-[9px] font-black uppercase tracking-[0.2em] text-white/30">
+          <h5 className="text-[#c38b2d] text-xs font-black uppercase tracking-[0.3em] mb-5">Support</h5>
+          <ul className="space-y-3 text-xs font-bold uppercase tracking-widest text-white/70">
             <li><a href="tel:+918077354975" className="hover:text-white transition-colors">+91 80-77354975</a></li>
             <li><a href="https://wa.me/918077354975" className="hover:text-white transition-colors">WhatsApp</a></li>
             <li><span className="hover:text-white transition-colors cursor-default">24/7 Signals</span></li>
@@ -52,8 +52,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <h5 className="text-[#c38b2d] text-[10px] font-black uppercase tracking-[0.4em] mb-4">Legal</h5>
-          <ul className="space-y-3 text-[9px] font-black uppercase tracking-[0.2em] text-white/30">
+          <h5 className="text-[#c38b2d] text-xs font-black uppercase tracking-[0.3em] mb-5">Legal</h5>
+          <ul className="space-y-3 text-xs font-bold uppercase tracking-widest text-white/70">
             <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
             <li><Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
             <li><Link href="/disclaimer" className="hover:text-white transition-colors">Disclaimer</Link></li>
@@ -63,13 +63,13 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto pt-8 border-t border-white/5">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-          <p className="text-[8px] font-black text-white/40 uppercase tracking-[0.8em]">
+          <p className="text-[10px] font-black text-white/60 uppercase tracking-[0.6em]">
             © 2026 ROAM & ROAR SAFARI.
           </p>
-          <a href="tel:+918077354975" className="text-[9px] font-black text-[#c38b2d] hover:text-white transition-colors tracking-[0.3em] uppercase">
+          <a href="tel:+918077354975" className="text-[10px] font-black text-[#c38b2d] hover:text-white transition-colors tracking-[0.3em] uppercase">
             +91 80-77354975
           </a>
-          <div className="text-[8px] font-black text-white/40 uppercase tracking-[0.4em]">
+          <div className="text-[10px] font-black text-white/60 uppercase tracking-[0.4em]">
             Ramnagar, Uttarakhand, India
           </div>
         </div>

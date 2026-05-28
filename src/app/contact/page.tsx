@@ -99,22 +99,7 @@ ${formData.get("message")}`;
         </div>
       </section>
 
-      <section className="px-6 md:px-20 mb-16">
-        <div className="max-w-4xl mx-auto bg-black border border-[#c38b2d]/30 p-8 md:p-12 rounded-3xl relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-1 h-full bg-[#c38b2d]"></div>
-          <h3 className="text-2xl font-black uppercase italic mb-6 text-white">⚠️ Important Disclaimer</h3>
-          <div className="space-y-4 text-white/50 text-sm font-bold leading-relaxed">
-            <p><strong className="text-white">Roam & Roar Safari is an independent, privately owned safari booking operator.</strong> We are not the official website of Jim Corbett National Park.</p>
-            <p>We are not affiliated with, endorsed by, or connected to the Uttarakhand Forest Department, the Government of India, or any government authority in any official capacity.</p>
-            <p>Safari permits are issued by the government — we assist customers in the booking process as a private service provider. All government permit fees are paid directly to the relevant authorities.</p>
-            <p className="pt-4 border-t border-white/10 text-xs">
-              <strong className="text-white">Proprietor:</strong> Ayaz Ahmed &nbsp;|&nbsp; 
-              <strong className="text-white"> Udyam Registration No.:</strong> UDYAM-UK-07-0048632 &nbsp;|&nbsp; 
-              <strong className="text-white"> Registered Address:</strong> Lutabarh, Berajhal, Ramnagar, Nainital – 244715, Uttarakhand
-            </p>
-          </div>
-        </div>
-      </section>
+
     </main>
   );
 }

@@ -19,7 +19,11 @@ async function getZohoAccessToken(): Promise<string> {
   const refresh_token = process.env.ZOHO_REFRESH_TOKEN;
 
   if (!client_id || !client_secret || !refresh_token) {
-    throw new Error('Missing Zoho credentials in environment variables');
+    const missing = [];
+    if (!client_id) missing.push('ZOHO_CLIENT_ID');
+    if (!client_secret) missing.push('ZOHO_CLIENT_SECRET');
+    if (!refresh_token) missing.push('ZOHO_REFRESH_TOKEN');
+    throw new Error(`Missing Zoho credentials in environment variables: ${missing.join(', ')}`);
   }
 
   const params = new URLSearchParams({

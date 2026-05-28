@@ -60,16 +60,31 @@ export default function ContactPage() {
                Fill in your details and we’ll get back to you within a few hours. Required fields are marked *.
              </p>
 
-             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+             <form 
+               className="space-y-6" 
+               onSubmit={(e) => {
+                 e.preventDefault();
+                 const formData = new FormData(e.currentTarget);
+                 const msg = `GENERAL ENQUIRY: 
+---------------------------
+NAME: ${formData.get("name")}
+PHONE: ${formData.get("phone")}
+EMAIL: ${formData.get("email")}
+---------------------------
+MESSAGE:
+${formData.get("message")}`;
+                 window.open(`https://wa.me/918077354975?text=${encodeURIComponent(msg)}`);
+               }}
+             >
                 <div>
-                  <input type="text" placeholder="Full Name *" required className="w-full bg-black/50 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-[#c38b2d] transition-colors" />
+                  <input name="name" type="text" placeholder="Full Name *" required className="w-full bg-black/50 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-[#c38b2d] transition-colors" />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <input type="email" placeholder="Email Address *" required className="w-full bg-black/50 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-[#c38b2d] transition-colors" />
-                  <input type="tel" placeholder="Phone Number *" required className="w-full bg-black/50 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-[#c38b2d] transition-colors" />
+                  <input name="email" type="email" placeholder="Email Address *" required className="w-full bg-black/50 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-[#c38b2d] transition-colors" />
+                  <input name="phone" type="tel" placeholder="Phone Number *" required className="w-full bg-black/50 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-[#c38b2d] transition-colors" />
                 </div>
                 <div>
-                  <textarea placeholder="Your Message / Enquiry Details *" required rows={5} className="w-full bg-black/50 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-[#c38b2d] transition-colors resize-none"></textarea>
+                  <textarea name="message" placeholder="Your Message / Enquiry Details *" required rows={5} className="w-full bg-black/50 border border-white/10 rounded-xl px-6 py-4 text-white focus:outline-none focus:border-[#c38b2d] transition-colors resize-none"></textarea>
                 </div>
                 <button type="submit" className="w-full bg-[#c38b2d] text-black font-black uppercase tracking-[0.2em] py-5 rounded-xl hover:bg-white transition-all transform hover:-translate-y-1">
                   Send Dispatch

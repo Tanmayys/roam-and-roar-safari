@@ -244,7 +244,7 @@ export default function Home() {
                    <p className="text-white/40 text-[11px] font-bold italic mb-6 leading-relaxed">"{zone.description}"</p>
                    <div className="mt-auto grid grid-cols-2 gap-3">
                       <Link href={`/services/${zone.id}`} className="bg-white/5 border border-white/10 text-white py-3 rounded-2xl text-[9px] font-black uppercase text-center hover:bg-white hover:text-black transition-all">Details</Link>
-                      <a href="https://wa.me/918077354975" className="bg-[#c38b2d] text-white py-3 rounded-2xl text-[9px] font-black uppercase text-center hover:bg-white hover:text-black transition-all" aria-label={`Book ${zone.name} Safari`}>Book</a>
+                      <Link href={`/services/${zone.id}`} className="bg-[#c38b2d] text-white py-3 rounded-2xl text-[9px] font-black uppercase text-center hover:bg-white hover:text-black transition-all" aria-label={`Book ${zone.name} Safari`}>Book</Link>
                    </div>
                 </div>
               </div>

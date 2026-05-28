@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+export const dynamic = 'force-dynamic';
+
 interface ZohoLeadData {
   Last_Name: string;
   First_Name?: string;

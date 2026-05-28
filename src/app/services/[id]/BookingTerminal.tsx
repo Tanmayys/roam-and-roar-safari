@@ -135,9 +135,8 @@ Please process permit verification.`;
                     {[
                       { n: "name", l: "Full Name *", p: "Enter your full name" },
                       { n: "phone", l: "Phone Number *", p: "+91 XXXXX XXXXX" },
-                      { n: "email", l: "Email Address *", p: "your@email.com" }
                     ].map(f => (
-                      <div key={f.n} className={`space-y-2.5 ${f.n === 'email' ? 'md:col-span-2' : ''}`}>
+                      <div key={f.n} className="space-y-2.5">
                         <label className="text-[10px] font-black uppercase tracking-widest text-[#c38b2d]">{f.l}</label>
                         <input 
                           name={f.n} 
@@ -148,6 +147,18 @@ Please process permit verification.`;
                         />
                       </div>
                     ))}
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="w-full md:w-[calc(50%-12px)] space-y-2.5">
+                      <label className="text-[10px] font-black uppercase tracking-widest text-[#c38b2d]">Email Address *</label>
+                      <input 
+                        name="email" 
+                        required 
+                        type="email" 
+                        placeholder="your@email.com" 
+                        className="w-full bg-[#1a2e1a] border border-white/20 p-5 rounded-xl text-sm md:text-base font-bold focus:outline-none focus:border-[#c38b2d] transition-all text-white placeholder:text-white/30" 
+                      />
+                    </div>
                   </div>
                </div>
 

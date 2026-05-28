@@ -47,7 +47,7 @@ export default function TermsAndConditionsPage() {
               <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-[#c38b2d] before:rounded-full">Coordination with licensed local guides and vehicle operators</li>
             </ul>
             <div className="bg-[#0a180a] border border-[#1a2e1a] p-4 rounded-xl text-xs">
-              <p>✅ <strong className="text-[#c38b2d]">Please Note:</strong> All safari permits are issued by the Uttarakhand Forest Department. Permit availability is subject to government quotas and seasonal restrictions. We assist in the booking process but cannot guarantee permit availability at all times.</p>
+              <p>✅ <strong className="text-[#c38b2d]">Please Note:</strong> All safari permits are issued by the Uttarakhand Forest Department. Permit availability is subject to government quotas and seasonal restrictions. We assist in the booking process but permits are entirely dependent on availability.</p>
             </div>
           </div>
 
@@ -101,7 +101,7 @@ export default function TermsAndConditionsPage() {
 
           <div>
             <h2 className="text-2xl font-black uppercase italic text-white mb-4 border-b border-white/10 pb-2">5. Rescheduling</h2>
-            <p>Rescheduling of a confirmed booking is subject to permit and operator availability on the new requested date. Rescheduling requests must be made at least 48 hours before the original safari date. We will make every effort to accommodate your request but cannot guarantee availability.</p>
+            <p>Rescheduling of a confirmed booking is subject to permit and operator availability on the new requested date. Rescheduling requests must be made at least 48 hours before the original safari date. We will make every effort to accommodate your request but availability depends solely on the forest department.</p>
           </div>
 
           <div>
@@ -123,7 +123,7 @@ export default function TermsAndConditionsPage() {
 
           <div>
             <h2 className="text-2xl font-black uppercase italic text-white mb-4 border-b border-white/10 pb-2">7. Wildlife & Force Majeure</h2>
-            <p className="mb-4">Wildlife sightings, including tiger sightings, cannot be guaranteed. Jim Corbett National Park is a natural wildlife habitat, and animal behaviour is unpredictable. We do not offer refunds based on the absence of specific wildlife sightings.</p>
+            <p className="mb-4">Wildlife sightings, including tiger sightings, depend entirely on natural movements. Jim Corbett National Park is a natural wildlife habitat, and animal behaviour is unpredictable. We do not offer refunds based on the absence of specific wildlife sightings.</p>
             <p className="mb-4">We are not liable for cancellations or changes caused by circumstances beyond our control, including but not limited to:</p>
             <ul className="list-none space-y-2 mb-4 ml-4">
               <li className="relative pl-4 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-[#c38b2d] before:rounded-full">Park closure by Forest Department or government authorities</li>

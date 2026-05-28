@@ -147,7 +147,7 @@ export default function Home() {
             <h4 className="text-[#c38b2d] text-[10px] font-black uppercase tracking-[0.6em] mb-6">Our Operations</h4>
             <h2 className="text-6xl md:text-8xl font-black leading-none mb-10 text-white italic uppercase tracking-tighter">THE WILD HQ</h2>
             <p className="text-2xl text-white/50 leading-relaxed font-bold italic mb-12">
-              Strategically based in Ramnagar, we provide the highest frequency of successful tiger sightings through expert tracking and core zone access.
+              Strategically based in Ramnagar, we offer an expert-guided safari experience with core zone access for the best possible chance of wildlife sightings.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
                <div>

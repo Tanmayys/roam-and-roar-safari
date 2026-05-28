@@ -30,7 +30,7 @@ export default function AboutPage() {
                 Founded with a deep passion for wildlife and a commitment to responsible tourism, we have been helping nature lovers, wildlife enthusiasts, and families experience the magic of Jim Corbett for over a year. From the first inquiry to the moment you spot a tiger in the wild — we are with you every step of the way.
               </p>
               <p>
-                Our team is made up of local experts who know Jim Corbett's terrain, zones, and wildlife patterns intimately. This local knowledge is what sets us apart and ensures every safari we plan is memorable.
+                Our team is made up of local experts who know Jim Corbett's terrain, zones, and wildlife patterns intimately. This local knowledge is what sets us apart and helps make every safari we plan memorable.
               </p>
             </div>
           </div>

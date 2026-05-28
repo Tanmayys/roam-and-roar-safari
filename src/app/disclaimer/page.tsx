@@ -32,7 +32,7 @@ export default function DisclaimerPage() {
 
           <div>
             <h2 className="text-2xl font-black uppercase italic text-white mb-4 border-b border-white/10 pb-2">Wildlife Sightings</h2>
-            <p className="mb-4">Jim Corbett National Park is a natural wildlife sanctuary. While we use experienced drivers and guides to maximize your chances of spotting wildlife, <strong>we do not and cannot guarantee sightings of tigers or any other specific animals.</strong></p>
+            <p className="mb-4">Jim Corbett National Park is a natural wildlife sanctuary. While we use experienced drivers and guides to maximize your chances of spotting wildlife, <strong className="text-white">sightings of tigers or any other specific animals depend on their natural movement.</strong></p>
             <p>Wildlife sightings are subject to natural behavior, weather conditions, and pure chance. No refunds will be provided based on the lack of wildlife sightings.</p>
           </div>
 

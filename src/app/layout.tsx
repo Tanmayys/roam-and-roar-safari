@@ -11,8 +11,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Roam & Roar Safari | Premium Jim Corbett Safari Bookings",
-  description: "Book premium safari experiences in Jim Corbett National Park. Expert naturalists, guaranteed bookings, and luxury Dhikala stays based in Ramnagar, Uttarakhand.",
+  title: "Roam & Roar Safari | Jim Corbett Safari Bookings",
+  description: "Book safari experiences in Jim Corbett National Park. Expert naturalists and guided Dhikala stays based in Ramnagar, Uttarakhand.",
 };
 
 export default function RootLayout({

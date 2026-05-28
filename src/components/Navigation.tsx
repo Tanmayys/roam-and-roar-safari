@@ -30,8 +30,9 @@ export default function Navigation() {
           {/* Desktop Links */}
           <div className="hidden lg:flex items-center gap-10 text-[10px] font-black uppercase tracking-[0.4em] text-white/50">
             <Link href="/" className="hover:text-[#c38b2d] transition-colors">Base</Link>
-            <Link href="/about" className="hover:text-[#c38b2d] transition-colors">Origins</Link>
+            <Link href="/about" className="hover:text-[#c38b2d] transition-colors">About Us</Link>
             <Link href="/services" className="hover:text-[#c38b2d] transition-colors">Territories</Link>
+            <Link href="/contact" className="hover:text-[#c38b2d] transition-colors">Contact Us</Link>
             <a href="tel:+918077354975" className="text-[#c38b2d] hover:text-white transition-colors tracking-widest">+91 80-77354975</a>
           </div>
 
@@ -63,8 +64,9 @@ export default function Navigation() {
         <div className="flex flex-col gap-10 text-center">
           {[
             { name: "Base", href: "/" },
-            { name: "Origins", href: "/about" },
-            { name: "Territories", href: "/services" }
+            { name: "About Us", href: "/about" },
+            { name: "Territories", href: "/services" },
+            { name: "Contact Us", href: "/contact" }
           ].map((item) => (
             <Link 
               key={item.name} 
